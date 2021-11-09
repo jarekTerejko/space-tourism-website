@@ -1,4 +1,11 @@
 {
+  "homeBgs": [
+    {
+      "desktop": "./assets/home/background-home-desktop.jpg",
+      "tablet": "./assets/home/background-home-tablet.jpg",
+      "mobile": "./assets/home/background-home-mobile.jpg"
+    }
+  ],
   "destinations": [
     {
       "name": "Moon",

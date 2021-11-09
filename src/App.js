@@ -4,10 +4,13 @@ import Technology from "./pages/Technology";
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NotFound from "./components/NotFound";
+import Navbar from "./components/Navbar";
+import { useState } from "react";
 
 function App() {
   return (
     <>
+      <Navbar />
       <Switch>
         <Route path="/" exact>
           <Home />
