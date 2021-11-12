@@ -16,6 +16,19 @@ export const HomepageBtn = styled(Link)`
   z-index: 1;
   transition: opacity var(--transition);
 
+  @media screen and (max-width: 850px) {
+    width: 24.2rem;
+    height: 24.2rem;
+    line-height: 242px;
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 560px) {
+    width: 15rem;
+    height: 15rem;
+    line-height: 150px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -29,6 +42,15 @@ export const HomepageBtn = styled(Link)`
     z-index: -3;
     opacity: 0;
     transition: opacity var(--transition);
+
+    @media screen and (max-width: 560px) {
+      top: -22px;
+      left: -22px;
+      background: transparent;
+      width: calc(100% + 44px);
+      height: calc(100% + 44px);
+      border: 22px solid hsl(229deg 13% 16%);
+    }
   }
 
   &:hover::before {

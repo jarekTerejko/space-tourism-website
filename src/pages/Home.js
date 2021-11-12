@@ -10,11 +10,10 @@ const Home = () => {
       {isLoading ? <Loader /> : null}
       {data.length === 0 ? null : (
         <>
-          {console.log(data)}
           <Homepage
-            homeDesktopBg={data[0].homeBgs[0].desktop}
-            homeTabletBg={data[0].homeBgs[0].tablet}
-            homeMobileBg={data[0].homeBgs[0].mobile}
+            homeDesktopBg={data[0].bgs[0].desktop}
+            homeTabletBg={data[0].bgs[0].tablet}
+            homeMobileBg={data[0].bgs[0].mobile}
           />
         </>
       )}
