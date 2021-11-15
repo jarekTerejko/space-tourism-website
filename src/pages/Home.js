@@ -1,6 +1,7 @@
 import useFetch from "../useFetch";
 import Loader from "../components/Loader";
-import Homepage from "../components/Homepage";
+import { PageBg } from "../components/PageBg/PageBgElement";
+import HomepageHero from "../components/HomepageHero";
 
 const Home = () => {
   const { data, isLoading } = useFetch("../data.json");
@@ -10,11 +11,13 @@ const Home = () => {
       {isLoading ? <Loader /> : null}
       {data.length === 0 ? null : (
         <>
-          <Homepage
+          <PageBg
             homeDesktopBg={data[0].bgs[0].desktop}
             homeTabletBg={data[0].bgs[0].tablet}
             homeMobileBg={data[0].bgs[0].mobile}
-          />
+          >
+            <HomepageHero />
+          </PageBg>
         </>
       )}
     </>
