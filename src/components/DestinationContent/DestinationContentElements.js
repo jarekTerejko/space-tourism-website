@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const DestinationContentWrapper = styled.section`
   padding-top: 13.6rem;
+  padding-bottom: 6.2rem;
+
+  @media screen and (max-width: 400px) {
+    padding-top: 8.8rem;
+  }
 `;
 
 export const DestinationContentInnerWrapper = styled.div`
@@ -10,16 +15,58 @@ export const DestinationContentInnerWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 2rem;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding-top: 0;
+  }
+
+  @media screen and (max-width: 400px) {
+    min-height: unset;
+  }
 `;
 export const DestinationContentColLeft = styled.div``;
 
 export const DestinationContentColRight = styled.div`
   margin-top: 9.7rem;
   margin-left: 11rem;
+
+  @media screen and (max-width: 1150px) {
+    margin-left: 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 5.3rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 400px) {
+    margin-top: 2.6rem;
+  }
 `;
 export const DestinationContentImgWrapper = styled.div`
   margin-top: 9.7rem;
   margin-left: 6.5rem;
+
+  @media screen and (max-width: 1150px) {
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (max-width: 400px) {
+    margin-top: 3.2rem;
+    max-width: 17rem;
+  }
 `;
 
 export const DestinationNav = styled.ul`
@@ -27,11 +74,30 @@ export const DestinationNav = styled.ul`
   display: flex;
   margin-bottom: 3.7rem;
   transform: translate(-15px, -5px);
-  height: 3.6rem;
+
+  @media screen and (max-width: 768px) {
+    transform: translate(0);
+    justify-content: center;
+    margin-bottom: 3.2rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    margin-bottom: 2rem;
+  }
 `;
+
 export const DestinationaNavItem = styled.li`
   margin: 0 1rem;
+
+  @media screen and (max-width: 400px) {
+    margin: 0 0.7rem;
+  }
+
+  @media screen and (max-width: 350px) {
+    margin: 0 0.2rem;
+  }
 `;
+
 export const DestinationNavBtn = styled.button`
   background: none;
   border: none;
@@ -48,6 +114,13 @@ export const DestinationNavBtn = styled.button`
   letter-spacing: 2.7px;
   text-transform: uppercase;
   transition: color var(--transition);
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    letter-spacing: 2.3625px;
+    padding-bottom: 0.8rem;
+  }
 
   &.active {
     color: var(--color-white);
@@ -86,6 +159,11 @@ export const DestinationInfoBox = styled.div`
   padding-top: 2.8rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media screen and (max-width: 400px) {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
 
   &::before {
     content: "";

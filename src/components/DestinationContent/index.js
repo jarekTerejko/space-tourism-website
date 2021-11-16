@@ -83,7 +83,7 @@ const DestinationContent = ({ data }) => {
                       })}
                     </DestinationNav>
                     <HeadingTwo>{item.name}</HeadingTwo>
-                    <TextRegular destinationPageTextText>
+                    <TextRegular destinationPageText>
                       {item.description}
                     </TextRegular>
                     <DestinationInfoBox>

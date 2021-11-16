@@ -5,7 +5,6 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import NotFound from "./components/NotFound";
 import Navbar from "./components/Navbar";
-import { useState } from "react";
 
 function App() {
   return (
