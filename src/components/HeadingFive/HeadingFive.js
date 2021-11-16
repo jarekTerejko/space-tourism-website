@@ -12,5 +12,21 @@ export const HeadingFive = styled.h5`
     color: rgba(255, 255, 255, 0.25);
     display: inline-block;
     margin-right: 2.8rem;
+
+    @media screen and (max-width: 400px) {
+      margin-right: 1.8rem;
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    font-size: 2rem;
+    letter-spacing: 3.375px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 2.7px;
+    text-align: center;
   }
 `;
