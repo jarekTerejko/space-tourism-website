@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   const changeNav = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 5) {
       setScrolledNav(true);
     } else {
       setScrolledNav(false);
@@ -53,7 +53,11 @@ const Navbar = () => {
       <ContainerElement>
         <NavbarInnerWrapper>
           <NavbarSiteLinkR to="/" onClick={closeMenu}>
-            <ImageEl className="logo" src={Logo} alt="Logo" />
+            <ImageEl
+              className="logo"
+              src={Logo}
+              alt="Logo"
+            />
           </NavbarSiteLinkR>
           <NavbarMenuBtn onClick={handleMenu}>
             <ImageEl

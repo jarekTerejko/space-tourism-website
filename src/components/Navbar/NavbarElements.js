@@ -43,6 +43,10 @@ export const NavbarInnerWrapper = styled.div`
   @media screen and (max-width: 1218px) {
     justify-content: space-between;
   }
+
+  @media screen and (max-width: 400px) {
+    height: 8.8rem;
+  }
 `;
 
 export const NavbarSiteLinkR = styled(Link)`
@@ -186,7 +190,7 @@ export const NavbarNavLinkR = styled(NavLink)`
   &:hover {
     color: var(--grey);
   }
-  
+
   @media screen and (max-width: 768px) {
     font-size: 1.4rem;
     display: inline-block;
