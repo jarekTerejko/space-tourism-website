@@ -6,8 +6,12 @@ export const TextRegular = styled.p`
   letter-spacing: 1.3px;
   max-width: 43rem;
   color: var(--color-light-violet);
-  margin: ${({ destinationPageTextText }) =>
-    destinationPageTextText ? "0 0 5.4rem 0" : ""};
+  margin: ${({ destinationPageText }) =>
+    destinationPageText ? "0 0 5.4rem 0" : ""};
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.6rem;
+  }
 
   @media screen and (max-width: 850px) {
     margin: ${({ homepageText }) => (homepageText ? "0 auto" : "")};
@@ -17,5 +21,12 @@ export const TextRegular = styled.p`
 
   @media screen and (max-width: 560px) {
     font-size: ${({ homepageText }) => (homepageText ? "1.5rem" : "")};
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: ${({ destinationPageText }) =>
+      destinationPageText ? "57.3rem" : ""};
+    line-height: 28px;
+    margin-bottom: 4.9rem;
   }
 `;
