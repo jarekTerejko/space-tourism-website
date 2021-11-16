@@ -15,7 +15,7 @@ const Destination = () => {
             homeTabletBg={data[0].bgs[1].tablet}
             homeMobileBg={data[0].bgs[1].mobile}
           >
-            <DestinationContent data={data}></DestinationContent>
+            <DestinationContent data={data} />
           </PageBg>
         </>
       )}
