@@ -1,6 +1,7 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const PageBg = styled.div`
+export const PageBg = styled(motion.div)`
   min-height: 90rem;
   margin: 0 auto;
   background-image: ${({ homeDesktopBg }) =>
