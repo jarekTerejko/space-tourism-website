@@ -47,18 +47,18 @@ const CrewContent = ({ data }) => {
     <>
       <CrewContentWrapper>
         <ContainerElement>
+          <HeadingFive crewHeading>
+            <span className="counter">02</span>Meet your crew
+          </HeadingFive>
           {data[0].crew.map((item, i) => {
             if (i === currentSlide) {
               return (
                 <CrewContenInnertWrapper key={i}>
                   <CrewContentColLeft>
-                    <HeadingFive>
-                      <span className="counter">02</span>Meet your crew
-                    </HeadingFive>
                     <CrewContentPersonInfoBox>
                       <HeadingFour roleHeading>{item.role}</HeadingFour>
                       <HeadingThree roleHeading>{item.name}</HeadingThree>
-                      <TextRegular>{item.bio}</TextRegular>
+                      <TextRegular crewPageText>{item.bio}</TextRegular>
                     </CrewContentPersonInfoBox>
 
                     <CrewContentDotsContainer>
@@ -73,8 +73,13 @@ const CrewContent = ({ data }) => {
                       })}
                     </CrewContentDotsContainer>
                   </CrewContentColLeft>
-                  <CrewContentColRight>
-                    <ImageEl src={item.images.png} />
+                  <CrewContentColRight
+                    className={`${item.name.split(" ")[0].toLowerCase()}`}
+                  >
+                    <ImageEl
+                      className={`${item.name.split(" ")[0].toLowerCase()}`}
+                      src={item.images.png}
+                    />
                   </CrewContentColRight>
                 </CrewContenInnertWrapper>
               );
