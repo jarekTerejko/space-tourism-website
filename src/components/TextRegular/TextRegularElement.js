@@ -29,4 +29,14 @@ export const TextRegular = styled.p`
     line-height: 28px;
     margin-bottom: 4.9rem;
   }
+
+  @media screen and (max-width: 945px) {
+    max-width: ${({ crewPageText }) => (crewPageText ? "60rem" : "")};
+    font-size: ${({ crewPageText }) => (crewPageText ? "1.6rem" : "")};
+  }
+
+  @media screen and (max-width: 375px) {
+    font-size: ${({ crewPageText }) => (crewPageText ? "1.5rem" : "")};
+    line-height: ${({ crewPageText }) => (crewPageText ? "2.5rem" : "")};
+  }
 `;
