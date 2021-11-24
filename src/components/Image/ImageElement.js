@@ -6,4 +6,18 @@ export const ImageEl = styled.img`
       max-width: 4rem;
     }
   }
+
+  &.douglas {
+    @media screen and (max-width: 768px) {
+      position: absolute;
+      top: 0;
+    }
+  }
+  
+  &.douglas {
+    @media screen and (max-width: 430px) {
+      top: unset;
+      bottom: 0;
+    }
+  }
 `;
