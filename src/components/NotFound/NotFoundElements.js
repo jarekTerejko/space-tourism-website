@@ -1,0 +1,28 @@
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+export const NotFoundWrapper = styled(motion.div)`
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--color-dark);
+  text-align: center;
+`;
+
+export const NotFoundHeading = styled.h1`
+  margin-bottom: 3rem;
+  font-size: 5rem;
+  max-width: 50rem;
+  text-align: center;
+`;
+
+export const NotFoundLink = styled(Link)`
+  color: var(--color-white);
+  font-size: 4rem;
+  margin: 3rem 0;
+  text-transform: uppercase;
+`;
