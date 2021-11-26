@@ -13,11 +13,21 @@ export const ImageEl = styled.img`
       top: 0;
     }
   }
-  
+
   &.douglas {
     @media screen and (max-width: 430px) {
       top: unset;
       bottom: 0;
     }
+  }
+
+  &.technology-portrait {
+    position: absolute;
+    right: 0;
+    top: 272px;
+  }
+
+  &.technology-landscape {
+    display: none;
   }
 `;

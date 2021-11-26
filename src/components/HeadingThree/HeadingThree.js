@@ -7,8 +7,7 @@ export const HeadingThree = styled.h3`
   line-height: 64px;
   text-transform: uppercase;
   margin-bottom: ${({ roleHeading }) => (roleHeading ? "2.7rem" : "")};
-  font-size: 40px;
-  line-height: 46px;
+  margin-bottom: ${({ technologyHeading }) => (technologyHeading ? "1.7rem" : "")};
 
   @media screen and (max-width: 945px) {
     font-size: ${({ roleHeading }) => (roleHeading ? "4rem" : "")};

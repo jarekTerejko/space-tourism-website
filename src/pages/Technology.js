@@ -1,6 +1,7 @@
 import useFetch from "../useFetch";
 import Loader from "../components/Loader";
 import { PageBg } from "../components/PageBg/PageBgElement";
+import TechnologyContent from "../components/TechnologyContent";
 const Technology = () => {
   const { data, isLoading } = useFetch("../data.json");
   //   console.log(data);
@@ -31,7 +32,7 @@ const Technology = () => {
           homeTabletBg={data[0].bgs[3].tablet}
           homeMobileBg={data[0].bgs[3].mobile}
         >
-          <h1>Technology</h1>
+          <TechnologyContent data={data} />
         </PageBg>
       )}
     </>
