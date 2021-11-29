@@ -13,6 +13,11 @@ export const TextRegular = styled.p`
     font-size: 1.6rem;
   }
 
+  @media screen and (max-width: 375px) {
+    font-size: 1.5rem;
+    line-height: 25px;
+  }
+
   @media screen and (max-width: 850px) {
     margin: ${({ homepageText }) => (homepageText ? "0 auto" : "")};
     max-width: ${({ homepageText }) => (homepageText ? "44rem" : "")};
