@@ -25,9 +25,28 @@ export const ImageEl = styled.img`
     position: absolute;
     right: 0;
     top: 272px;
+
+    @media screen and (max-width: 1180px) {
+      position: static;
+      margin-top: 13.7rem;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   &.technology-landscape {
     display: none;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 220px;
+    }
+
+    @media screen and (max-width: 375px) {
+      top: 139px;
+    }
   }
 `;
