@@ -75,7 +75,7 @@ const TechnologyContent = ({ data }) => {
                     className="technology-portrait"
                   />
                   <ImageEl
-                    src={item.images.portrait}
+                    src={item.images.landscape}
                     className="technology-landscape"
                   />
                 </TechnologyContentInnerWrapper>
