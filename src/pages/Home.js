@@ -4,22 +4,8 @@ import { PageBg } from "../components/PageBg/PageBgElement";
 import HomepageHero from "../components/HomepageHero";
 import NotFound from "../components/NotFound";
 
-const Home = () => {
+const Home = ({ containerVariants }) => {
   const { data, isLoading } = useFetch("../data.json");
-
-  const containerVariants = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: { delay: 0.1, duration: 1 },
-    },
-    exit: {
-      opacity: 0,
-      transition: { ease: "easeInOut" },
-    },
-  };
 
   return (
     <>

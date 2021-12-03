@@ -2,22 +2,8 @@ import useFetch from "../useFetch";
 import Loader from "../components/Loader";
 import { PageBg } from "../components/PageBg/PageBgElement";
 import TechnologyContent from "../components/TechnologyContent";
-const Technology = () => {
+const Technology = ({ containerVariants }) => {
   const { data, isLoading } = useFetch("../data.json");
-  //   console.log(data);
-  const containerVariants = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: { delay: 0.1, duration: 1 },
-    },
-    exit: {
-      opacity: 0,
-      transition: { ease: "easeInOut" },
-    },
-  };
 
   return (
     <>
