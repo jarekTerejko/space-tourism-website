@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {motion} from 'framer-motion'
 
 export const TechnologyContentWrapper = styled.section`
   position: relative;
@@ -13,7 +14,7 @@ export const TechnologyContentWrapper = styled.section`
   }
 `;
 
-export const TechnologyContentInnerWrapper = styled.div`
+export const TechnologyContentInnerWrapper = styled(motion.div)`
   display: grid;
   grid-template-columns: max-content 1fr;
   column-gap: 80px;
@@ -54,7 +55,7 @@ export const TechnologyContentCircleBtnsContainer = styled.div`
   }
 `;
 
-export const TechnologyContentCircleBtn = styled.button`
+export const TechnologyContentCircleBtn = styled(motion.button)`
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
@@ -101,7 +102,7 @@ export const TechnologyContentCircleBtn = styled.button`
   }
 `;
 
-export const TechnologyContentColDescription = styled.div`
+export const TechnologyContentColDescription = styled(motion.div)`
   margin-top: 13.7rem;
 
   @media screen and (max-width: 768px) {

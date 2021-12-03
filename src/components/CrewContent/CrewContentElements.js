@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const CrewContentWrapper = styled.section`
@@ -7,7 +8,7 @@ export const CrewContentWrapper = styled.section`
   }
 `;
 
-export const CrewContenInnertWrapper = styled.div`
+export const CrewContenInnertWrapper = styled(motion.div)`
   display: grid;
   grid-template-columns: 1fr max-content;
 
@@ -51,7 +52,7 @@ export const CrewContentColLeft = styled.div`
   }
 `;
 
-export const CrewContentColRight = styled.div`
+export const CrewContentColRight = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -109,7 +110,7 @@ export const CrewContentColRight = styled.div`
   }
 `;
 
-export const CrewContentPersonInfoBox = styled.div`
+export const CrewContentPersonInfoBox = styled(motion.div)`
   margin-top: 15.4rem;
 
   @media screen and (max-width: 1000px) {

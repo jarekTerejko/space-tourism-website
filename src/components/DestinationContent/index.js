@@ -19,6 +19,7 @@ import {
 import { TextRegular } from "../TextRegular/TextRegularElement";
 import { SubheadingTwo } from "../SubheadingTwo/SubheadingTwoElement";
 import { SubheadingOne } from "../SubheadingOne/SubheadingOneElement";
+import { AnimatePresence, motion } from "framer-motion";
 
 const DestinationContent = ({ data }) => {
   // console.log(data)
@@ -53,56 +54,71 @@ const DestinationContent = ({ data }) => {
     <>
       <DestinationContentWrapper>
         <ContainerElement>
-          {data[0].destinations.map((item, i) => {
-            if (i === currentTab) {
-              return (
-                <DestinationContentInnerWrapper key={i}>
-                  <DestinationContentColLeft>
-                    <HeadingFive>
-                      <span className="counter">01</span>Pick your destination
-                    </HeadingFive>
-                    <DestinationContentImgWrapper>
-                      <ImageEl src={item.images.png} />
-                    </DestinationContentImgWrapper>
-                  </DestinationContentColLeft>
-                  <DestinationContentColRight>
-                    <DestinationNav>
-                      {destinationNavItems.map((destination, i) => {
-                        return (
-                          <DestinationaNavItem key={i}>
-                            <DestinationNavBtn
-                              className={
-                                destinationNavItems[i].isActive ? "active" : ""
-                              }
-                              onClick={() => toggleTab(i)}
-                            >
-                              {destination.name}
-                            </DestinationNavBtn>
-                          </DestinationaNavItem>
-                        );
-                      })}
-                    </DestinationNav>
-                    <HeadingTwo>{item.name}</HeadingTwo>
-                    <TextRegular destinationPageText>
-                      {item.description}
-                    </TextRegular>
-                    <DestinationInfoBox>
-                      <DestinationInfoBoxColLeft>
-                        <SubheadingTwo>Avg. Distance</SubheadingTwo>
-                        <SubheadingOne>{item.distance}</SubheadingOne>
-                      </DestinationInfoBoxColLeft>
-                      <DestinationInfoBoxColRight>
-                        <SubheadingTwo>Est. travel time</SubheadingTwo>
-                        <SubheadingOne>{item.travel}</SubheadingOne>
-                      </DestinationInfoBoxColRight>
-                    </DestinationInfoBox>
-                  </DestinationContentColRight>
-                </DestinationContentInnerWrapper>
-              );
-            } else {
-              return null;
-            }
-          })}
+          <AnimatePresence exitBeforeEnter initial={false}>
+            {data[0].destinations
+              .filter((_, iterator) => iterator === currentTab)
+              .map((item, i) => {
+                return (
+                  <DestinationContentInnerWrapper key={currentTab}>
+                    <DestinationContentColLeft>
+                      <HeadingFive>
+                        <span className="counter">01</span>Pick your destination
+                      </HeadingFive>
+                      <AnimatePresence>
+                        <DestinationContentImgWrapper
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                        >
+                          <ImageEl src={item.images.png} />
+                        </DestinationContentImgWrapper>
+                      </AnimatePresence>
+                    </DestinationContentColLeft>
+                    <DestinationContentColRight>
+                      <DestinationNav>
+                        {destinationNavItems.map((destination, i) => {
+                          return (
+                            <DestinationaNavItem key={i}>
+                              <DestinationNavBtn
+                                className={
+                                  destinationNavItems[i].isActive
+                                    ? "active"
+                                    : ""
+                                }
+                                onClick={() => toggleTab(i)}
+                              >
+                                {destination.name}
+                              </DestinationNavBtn>
+                            </DestinationaNavItem>
+                          );
+                        })}
+                      </DestinationNav>
+                      <motion.div
+                        key={item.currentTab}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        <HeadingTwo>{item.name}</HeadingTwo>
+                        <TextRegular destinationPageText>
+                          {item.description}
+                        </TextRegular>
+                        <DestinationInfoBox>
+                          <DestinationInfoBoxColLeft>
+                            <SubheadingTwo>Avg. Distance</SubheadingTwo>
+                            <SubheadingOne>{item.distance}</SubheadingOne>
+                          </DestinationInfoBoxColLeft>
+                          <DestinationInfoBoxColRight>
+                            <SubheadingTwo>Est. travel time</SubheadingTwo>
+                            <SubheadingOne>{item.travel}</SubheadingOne>
+                          </DestinationInfoBoxColRight>
+                        </DestinationInfoBox>
+                      </motion.div>
+                    </DestinationContentColRight>
+                  </DestinationContentInnerWrapper>
+                );
+              })}
+          </AnimatePresence>
         </ContainerElement>
       </DestinationContentWrapper>
     </>

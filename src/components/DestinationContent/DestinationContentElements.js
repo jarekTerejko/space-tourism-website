@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const DestinationContentWrapper = styled.section`
@@ -14,15 +15,17 @@ export const DestinationContentInnerWrapper = styled.div`
   padding-top: 7.6rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 2rem;
+  column-gap: 20px;
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     padding-top: 0;
+    row-gap: 53px;
   }
 
   @media screen and (max-width: 400px) {
     min-height: unset;
+    row-gap: 26px;
   }
 `;
 export const DestinationContentColLeft = styled.div``;
@@ -36,17 +39,13 @@ export const DestinationContentColRight = styled.div`
   }
 
   @media screen and (max-width: 768px) {
-    margin-top: 5.3rem;
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
   }
-
-  @media screen and (max-width: 400px) {
-    margin-top: 2.6rem;
-  }
 `;
-export const DestinationContentImgWrapper = styled.div`
+export const DestinationContentImgWrapper = styled(motion.div)`
   margin-top: 9.7rem;
   margin-left: 6.5rem;
 
@@ -61,11 +60,13 @@ export const DestinationContentImgWrapper = styled.div`
     max-width: 30rem;
     margin-left: auto;
     margin-right: auto;
+    min-height: 30rem;
   }
 
   @media screen and (max-width: 400px) {
     margin-top: 3.2rem;
     max-width: 17rem;
+    min-height: 17rem;
   }
 `;
 
@@ -154,7 +155,7 @@ export const DestinationNavBtn = styled.button`
   }
 `;
 
-export const DestinationInfoBox = styled.div`
+export const DestinationInfoBox = styled(motion.div)`
   position: relative;
   padding-top: 2.8rem;
   display: grid;
