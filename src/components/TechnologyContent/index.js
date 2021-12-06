@@ -46,7 +46,7 @@ const TechnologyContent = ({ data }) => {
       <TechnologyContentWrapper>
         <ContainerElement>
           <HeadingFive>
-            <span className="counter">03</span>SPACE LAUNCH 101
+            <span className="counter">03</span>Space launch 101
           </HeadingFive>
           <AnimatePresence exitBeforeEnter initial={false}>
             {data[0].technology
@@ -86,10 +86,12 @@ const TechnologyContent = ({ data }) => {
                       <ImageEl
                         src={item.images.portrait}
                         className="technology-portrait"
+                        alt={item.name}
                       />
                       <ImageEl
                         src={item.images.landscape}
                         className="technology-landscape"
+                        alt={item.name}
                       />
                     </motion.div>
                   </TechnologyContentInnerWrapper>

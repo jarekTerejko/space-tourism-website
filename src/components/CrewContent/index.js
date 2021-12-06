@@ -89,6 +89,7 @@ const CrewContent = ({ data }) => {
                       <ImageEl
                         className={`${item.name.split(" ")[0].toLowerCase()}`}
                         src={item.images.png}
+                        alt={`${item.name} - ${item.role}`}
                       />
                     </CrewContentColRight>
                   </CrewContenInnertWrapper>
