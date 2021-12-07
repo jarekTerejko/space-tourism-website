@@ -84,8 +84,9 @@ export const NavbarNavItems = styled.ul`
   list-style: none;
   transition: var(--transition);
   min-height: 9.6rem;
-  background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
+  /* background: rgba(0, 0, 0, 0.1); */
+  /* backdrop-filter: blur(20px); */
+  background: var(--color-dark);
 
   @media screen and (min-width: 1440px) {
     position: fixed;
@@ -97,7 +98,7 @@ export const NavbarNavItems = styled.ul`
   @media screen and (max-width: 768px) {
     position: fixed;
     right: 0;
-    background: rgba(255, 255, 255, 0.03);
+    /* background: rgba(255, 255, 255, 0.03); */
   }
   @media screen and (max-width: 570px) {
     position: absolute;
