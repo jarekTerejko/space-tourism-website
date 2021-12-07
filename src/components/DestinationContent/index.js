@@ -70,7 +70,7 @@ const DestinationContent = ({ data }) => {
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
                         >
-                          <img src={item.images.png} alt={item.name} />
+                          <ImageEl src={item.images.png} alt={item.name} />
                         </DestinationContentImgWrapper>
                       </AnimatePresence>
                     </DestinationContentColLeft>
